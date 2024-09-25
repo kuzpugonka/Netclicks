@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netclicks</title>
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo" href="/index.html">
+          NETCLICKS
+          <span class="header__logo-text">всё о сериалах</span>
+        </a>
+        <a class="header__btn">
+          <span class="header__btn-text">Вход и регистрация</span>
+          <img
+            class="header__btn_mobile"
+            src="./images/burger.svg"
+            alt="кнопка меню"
+            aria-label="кнопка мобильного меню"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="search">
+        <div class="container">
+          <div class="search__content">
+            <input
+              class="search__input"
+              type="text"
+              placeholder="Что хотите посмотреть?"
+            />
+            <button class="search__btn">
+              <span class="search__btn-text">Найти</span>
+              <img
+                class="search__btn_mobile"
+                src="./images/search.svg"
+                alt="кнопка поиска"
+                aria-label="кнопка поиска"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="content-wrap">
+            <div class="content__itog-search">
+              <h2 class="content__title">Результаты поиска</h2>
+
+              <div class="content__selection-list">
+                <!-- card -->
+                <article class="content__selection card">
+                  <a class="card__link" href="#">
+                    <div class="card__img">
+                      <img
+                        class="card-img"
+                        src="./images/img-film.png"
+                        srcset="./images/img-film@2x.png 2x"
+                        alt="баннер фильма"
+                        aria-label="баннер фильма"
+                      />
+                    </div>
+
+                    <div class="card__desc">
+                      <h3 class="card__title">
+                        <span class="card__title_bold">Марсианин</span>, The
+                        Martian 2015
+                      </h3>
+                      <p class="card__category">Фантастика, приключения</p>
+                      <p class="card__top">7.8</p>
+                    </div>
+                  </a>
+                </article>
+                <!-- duble -->
+                <article class="content__selection card">
+                  <a class="card__link" href="#">
+                    <div class="card__img">
+                      <img
+                        class="card-img"
+                        src="./images/img-film.png"
+                        srcset="./images/img-film@2x.png 2x"
+                        alt="баннер фильма"
+                        aria-label="баннер фильма"
+                      />
+                    </div>
+
+                    <div class="card__desc">
+                      <h3 class="card__title">
+                        <span class="card__title_bold">Марсианин</span>, The
+                        Martian 2015
+                      </h3>
+                      <p class="card__category">Фантастика, приключения</p>
+                      <p class="card__top">7.8</p>
+                    </div>
+                  </a>
+                </article>
+
+                <article class="content__selection card">
+                  <a class="card__link" href="#">
+                    <div class="card__img">
+                      <img
+                        class="card-img"
+                        src="./images/img-film.png"
+                        srcset="./images/img-film@2x.png 2x"
+                        alt="баннер фильма"
+                        aria-label="баннер фильма"
+                      />
+                    </div>
+
+                    <div class="card__desc">
+                      <h3 class="card__title">
+                        <span class="card__title_bold">Марсианин</span>, The
+                        Martian 2015
+                      </h3>
+                      <p class="card__category">Фантастика, приключения</p>
+                      <p class="card__top">7.8</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+
+            <div class="content__side">
+              <div class="content__set">
+                <h2 class="content__set-title">Подборки фильмов и сериалов</h2>
+
+                <div class="content__set-list">
+                  <a class="content__set-item" href="#">
+                    <h3 class="content__set-category">Топ-250</h3>
+                    <p class="content__set-desc">
+                      Подборка фильмов и&nbsp;сериалов с&nbsp;наивысшими оценками зрителей
+                    </p>
+                  </a>
+
+                  <a class="content__set-item" href="#">
+                    <h3 class="content__set-category">Посмеяться от&nbsp;души</h3>
+                    <p class="content__set-desc">
+                      Подборка комедий, которые помогут расслабиться после&nbsp;работы
+                    </p>
+                  </a>
+
+                  <a class="content__set-item" href="#">
+                    <h3 class="content__set-category">Запутанный сюжет</h3>
+                    <p class="content__set-desc">
+                      Триллеры и&nbsp;приключения с&nbsp;запутанным и&nbsp;интересным сюжетом. Невозможно оторваться!
+                    </p>
+                  </a>
+                </div>
+              </div>
+
+              <div class="content__footer">
+                <p class="content__footer-copiright">
+                  © ООО «Неткликс», 2024
+                </p>
+                <a class="content__footer-privacy" href="#">
+                  Политика конфиденциальности
+                </a>
+                <a class="content__footer-personal" href="#">
+                  Обработка персональных данных
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

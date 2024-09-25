@@ -1,0 +1,305 @@
+/* fonts */
+/* inter-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-v18-cyrillic_latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* inter-500 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/inter-v18-cyrillic_latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* inter-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-v18-cyrillic_latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1194px;
+  padding: 0 24px;
+}
+
+/* header */
+.header {
+  padding-top: 34px;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+}
+.header__logo-text {
+  display: block;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+}
+.header__btn {
+  display: flex;
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header__btn:hover {
+  color: rgb(255, 73, 73);
+}
+.header__btn_mobile {
+  display: none;
+}
+/* search */
+.search {
+  padding-top: 15px;
+}
+.search__content {
+  border: 1px solid rgb(255, 73, 73);
+  border-radius: 5px;
+  background: rgb(255, 73, 73);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+}
+.search__input {
+  padding: 14px 31px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background: rgb(255, 255, 255);
+  flex-grow: 1;
+  min-width: 0;
+}
+.search__input:placeholder {
+  color: rgb(135, 135, 135);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+}
+.search__btn {
+  color: rgb(255, 255, 255);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  padding: 14px 33px;
+  background-color: inherit;
+  border-color: transparent;
+  flex-grow: 0;
+  cursor: pointer;
+}
+.search__btn_mobile {
+  display: none;
+}
+
+/* content */
+.content {
+  padding-top: 39px;
+}
+.content-wrap {
+  display: flex;
+  gap: 39px 30px;
+  margin-bottom: 94px;
+}
+.content__itog-search {
+  flex-grow: 1;
+}
+.content__title {
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  margin: 0 0 25px;
+}
+.content__selection-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 39px 30px;
+}
+.content__side {
+  max-width: 262px;
+  min-height: calc(100vh - 189px - 94px);
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.content__set {
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.content__set-title {
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin: 0 0 23px;
+}
+.content__set-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content__set-item {
+  display: block;
+}
+.content__set-category {
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  margin: 0 0 5px;
+}
+.content__set-desc {
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin: 0;
+}
+.content__footer-copiright {
+  color: rgb(170, 170, 170);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  margin: 0 0 5px;
+}
+.content__footer-privacy {
+  color: rgb(170, 170, 170);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration-line: underline;
+  margin-bottom: 5px;
+}
+.content__footer-personal {
+  color: rgb(170, 170, 170);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-decoration-line: underline;
+}
+
+/* card film */
+.card {
+  max-width: 264px;
+  margin: 0 auto;
+}
+.card__img {
+  width: 100%;
+  font-size: 0;
+}
+.card-img {
+  width: 100%;
+  height: auto;
+}
+.card__desc {
+  padding-top: 12px;
+}
+.card__title {
+  color: rgb(0, 0, 0);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 0 0 4px;
+}
+.card__title_bold {
+  font-weight: 700;
+}
+.card__category {
+  color: rgb(134, 134, 134);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  margin: 0 0 12px;
+}
+.card__top {
+  color: rgb(4, 163, 30);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .header__btn {
+    align-self: flex-start;
+  }
+  .header__btn-text {
+    display: none;
+  }
+  .header__btn_mobile {
+    display: block;
+  }
+  .search__btn-text {
+    display: none;
+  }
+  .search__btn_mobile {
+    display: block;
+  }
+  .search__input {
+    padding: 14px;
+  }
+  .content-wrap {
+    flex-direction: column;
+  }
+  .content__selection-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 39px 30px;
+  }
+  /* todo шрифты отредактировать */
+}
