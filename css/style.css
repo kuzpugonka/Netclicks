@@ -2,42 +2,48 @@
 /* inter-300 - cyrillic_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src: url('../fonts/inter-v18-cyrillic_latin-300.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/inter-v18-cyrillic_latin-300.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/inter-v18-cyrillic_latin-300.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-300.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* inter-regular - cyrillic_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/inter-v18-cyrillic_latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/inter-v18-cyrillic_latin-regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/inter-v18-cyrillic_latin-regular.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* inter-500 - cyrillic_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/inter-v18-cyrillic_latin-500.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/inter-v18-cyrillic_latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/inter-v18-cyrillic_latin-500.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-500.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 /* inter-700 - cyrillic_latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/inter-v18-cyrillic_latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-       url('../fonts/inter-v18-cyrillic_latin-700.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+  src: url("../fonts/inter-v18-cyrillic_latin-700.woff2") format("woff2"),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url("../fonts/inter-v18-cyrillic_latin-700.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 0;
@@ -46,6 +52,9 @@ body {
   font-weight: normal;
   line-height: 1.2;
   color: rgb(0, 0, 0);
+}
+.hidden {
+  display: none;
 }
 a {
   text-decoration: none;
@@ -83,6 +92,9 @@ a {
   font-size: 14px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  appearance: none;
+  border: none;
+  background-color: transparent;
 }
 .header__btn:hover {
   color: rgb(255, 73, 73);
@@ -133,12 +145,19 @@ a {
 .content {
   padding-top: 39px;
 }
+.content_film {
+  padding-top: 52px;
+}
 .content-wrap {
   display: flex;
   gap: 39px 30px;
   margin-bottom: 94px;
 }
-.content__itog-search {
+.content-wrap_film {
+  gap: 60px 43px;
+}
+.content__itog-search,
+.content__film {
   flex-grow: 1;
 }
 .content__title {
@@ -153,13 +172,14 @@ a {
   gap: 39px 30px;
 }
 .content__side {
-  max-width: 262px;
+  width: 262px;
   min-height: calc(100vh - 189px - 94px);
   display: flex;
   flex-direction: column;
   gap: 120px;
   justify-content: space-between;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  flex-grow: 0;
 }
 .content__set {
   align-items: flex-start;
@@ -227,7 +247,6 @@ a {
 }
 .card__title {
   font-size: 16px;
-
   margin: 0 0 4px;
 }
 .card__title_bold {
@@ -245,6 +264,76 @@ a {
   margin: 0;
 }
 
+/* film page */
+.film {
+  width: 100%;
+  max-width: 838px;
+  display: flex;
+  gap: 12px 28px;
+}
+.film__img {
+  width: 100%;
+  max-width: 460px;
+  font-size: 0;
+  border-radius: 10px;
+}
+.film-img {
+  width: 100%;
+  height: auto;
+}
+.film__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 350px;
+}
+.film__title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 3px;
+}
+.film__title_bold {
+  font-weight: 700;
+}
+.film__category {
+  color: rgb(134, 134, 134);
+  font-size: 16px;
+  margin: 0 0 2px;
+}
+.film__rating {
+  color: rgb(4, 163, 30);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 29px;
+}
+.film__info {
+  font-size: 14px;
+}
+.film__info-p:not(:last-child) {
+  margin: 0 0 12px;
+}
+.film__btn-run {
+  padding: 16px 101px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  background-color: rgb(255, 73, 73);
+}
+
+@media (max-width: 991px) {
+  .content__selection-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .film {
+    flex-direction: column;
+    align-items: center;
+  }
+  .film__desc {
+    max-width: 460px;
+  }
+}
 @media (max-width: 768px) {
   .header__btn {
     align-self: flex-start;
@@ -266,9 +355,13 @@ a {
   }
   .content-wrap {
     flex-direction: column;
+    margin-bottom: 25px;
   }
   .content__selection-list {
     grid-template-columns: repeat(1, 1fr);
     gap: 39px 30px;
+  }
+  .content__side {
+    min-height: 120px;
   }
 }
