@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Netclicks</title>
     <link href="./css/style.css" rel="stylesheet" />
+
+    <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -26,17 +28,18 @@
     </header>
 
     <main>
-      <h1 class="hidden"></h1>
+      <h1 class="hidden">Тренировочный сайт</h1>
       <section class="search">
         <div class="container">
           <div class="search__content">
             <h2 class="hidden">Поиск по сайту</h2>
             <input
               class="search__input"
+              id="search-input"
               type="text"
               placeholder="Что хотите посмотреть?"
             />
-            <button class="search__btn">
+            <button class="search__btn" id="search-btn">
               <span class="search__btn-text">Найти</span>
               <img
                 class="search__btn_mobile"
